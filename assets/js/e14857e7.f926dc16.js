@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_2023kentech_presentation=self.webpackChunk_2023kentech_presentation||[]).push([[328],{5745:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-pages","id":"default"}')}}]);
