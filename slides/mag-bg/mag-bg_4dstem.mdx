@@ -1,0 +1,33 @@
+---
+id: ptycho-bg_4dstem
+sidebar_position: 2
+title: 4DSTEM
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import STEMSchematic from '@site/static/img/4DSTEM_defocused_looping.gif';
+import Multislice4DstemComponent from '@site/src/components/Multislice4DstemComponent.js';
+
+## 4D Scanning Transmission Electron Microscopy
+
+<Tabs Lazy>
+  <TabItem value="schematic" label="Schematic Description" default>
+
+<ul>
+  <li> Focused electron beam scanned across sample </li>
+  <li> 2D Diffraction patterns collected at each 2D scan position &rarr; "4D-STEM"</li>
+</ul>
+  
+    <figure>
+      <img src={STEMSchematic} alt="4DSTEM Schematic" width="60%" height="auto"/>
+    </figure>
+  </TabItem>
+  <TabItem value="interactive-simulation" label="Interactive Simulation">
+    <Multislice4DstemComponent />
+  </TabItem>
+</Tabs>
+

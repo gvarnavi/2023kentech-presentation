@@ -1,0 +1,36 @@
+---
+id: tomo-bg_vector-tomo
+sidebar_position: 3
+title: Vector Tomography
+hide_table_of_contents: true
+hide_title: true
+---
+
+import VectorFieldTomography from '@site/static/img/vector-field-tomography.png';
+
+## Vector Tomography
+
+- Accelerated electron beams interacting with a thin sample acquire phase shifts:  
+
+$$
+\begin{aligned}
+
+\phi\left(\boldsymbol{r}_{\perp}\right) &= \phi_e\left(\boldsymbol{r}_{\perp}\right) + \phi_m \left(\boldsymbol{r}_{\perp}\right) \\
+&= \frac{e}{\hbar v} \int_L V(\boldsymbol{r}_{\perp},z) dz - \frac{e}{\hbar} \int_L \boldsymbol{A}(\boldsymbol{r}_{\perp},z) \cdot d \boldsymbol{r}
+\end{aligned}
+$$
+
+- Can we reconstruct the 3D vector potential using tilt-series magnetic projections?
+  - Using Maxwell's equations, we can convert this to two scalar Radon transforms for the magnetic field
+
+$$
+\nabla_{x,y} \phi_m(\boldsymbol{r}_{\perp}) = \frac{e}{\hbar} \int_L \binom{B_y(\boldsymbol{r}_{\perp},z)}{-B_x(\boldsymbol{r}_{\perp},z)} dz
+$$
+    
+<figure>
+<img src={VectorFieldTomography} alt="Vector field tomography" width="100%" height="auto"/>
+<figcaption>D Wolf et al., Nat. Nano. 17 250-255 (2022)</figcaption>
+</figure>
+
+- How about using the tilt-series of 4D-STEM data directly?
+  - Yes, we can use vector ptychographic tomography

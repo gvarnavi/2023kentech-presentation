@@ -1,0 +1,52 @@
+---
+id: ptycho-bg_py4dstem
+sidebar_position: 4
+title: Phase Retrieval in py4DSTEM
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Py4DSTEMImage from '@site/static/img/py4dstem-phase-retrieval.svg';
+
+
+## Phase Retrieval in py4DSTEM
+
+- Suite of phase retrieval algorithms, including iterative DPC and Parallax
+
+<Figure>
+<Py4DSTEMImage width="100%" height="auto"/>
+<figcaption> Tutorial dataset from Y Jiang et al, Nature 559, 343 (2018) </figcaption>
+</Figure>
+
+<details>
+  <summary> User-friendly code </summary>
+
+```python  
+  ptycho = SingleslicePtychographicReconstruction(
+      datacube=dataset,
+      energy = 80e3,
+      semiangle_cutoff = 21.4,
+  ).preprocess(
+      fit_function = "plane", # de-scan correction
+  ).reconstruct(
+      max_iter = 8,
+      step_size = 0.5,
+      gaussian_filter_sigma = 0.3, # A
+  ).visualize(
+  )
+```
+
+Check out our tutorial notebooks [here](https://github.com/py4dstem/py4DSTEM_tutorials/tree/main/notebooks), and our recent preprint [arXiv:2309.05250](https://arxiv.org/abs/2309.05250)!  
+
+</details>
+
+- Iterative ptychography features:
+  - Gradient-descent and projection-set algorithms
+  - STEM-specific regularizations
+  - Probe-position refinement
+  - Hyperparameter tuning using Bayesian optimization
+  - Mixed-state reconstructions
+  - Single-slice and multi-slice reconstructions
+  - ** Joint ptychographic-tomographic reconstructions **
+  - ** Simultaneous reconstructions for electrostatic and magnetic fields **
+

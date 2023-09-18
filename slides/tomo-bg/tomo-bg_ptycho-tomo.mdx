@@ -1,0 +1,45 @@
+---
+id: tomo-bg_ptycho-tomo
+sidebar_position: 2
+title: Ptychographic Tomography
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import SerialPtychoTomoSchematic from '@site/static/img/serial-ptycho-tomo-schematic.png';
+import JointPtychoTomoSchematic from '@site/static/img/mset-schematic.png';
+import OverlapTomoComparison from '@site/static/img/overlap-tomo-comparison.svg';
+
+## Ptychographic Tomography
+
+- Traditional STEM electron tomography techniques use inelastically-scattered electrons (HAADF)
+  - Easy to interpret, Z-contrast
+- "Serial" ptychographic tomography instead uses ptychographic reconstructions for the 2D projections
+  - More dose efficient, sensitive to light atoms
+- "Joint" ptychographic tomography takes this a step further, reconstructing the 3D volume directly
+  - Relaxed probe overlap requirements, effective missing-wedge regularization
+
+<Tabs>
+  <TabItem value="serial-ptycho-tomo" label="Serial Ptychographic Tomography" default>
+    <figure>
+      <img src={SerialPtychoTomoSchematic} alt="Serial ptychographic tomography" width="80%" height="auto"/>
+      <figcaption>P Pelz et al., arXiv:2206.08958 (2022)</figcaption>
+    </figure>
+  </TabItem>
+  <TabItem value="joint-ptycho-tomo" label="Joint Ptychographic Tomography">
+    <figure>
+      <img src={JointPtychoTomoSchematic} alt="Joint ptychographic tomography" width="90%" height="auto"/>
+      <figcaption>J Lee et al., Phys. Rev. Applied 19, 054062 (2023)</figcaption>
+    </figure>
+  </TabItem>
+  <TabItem value="overlap-tomo-comparison" label="Serial vs Joint Comparison">
+    <figure>
+      <OverlapTomoComparison width="90%" height="auto"/>
+      <figcaption>G. Varnavides, S. Ribet et al,  arXiv:2309.05250 (2023)</figcaption>
+    </figure>
+  </TabItem>
+</Tabs>
+

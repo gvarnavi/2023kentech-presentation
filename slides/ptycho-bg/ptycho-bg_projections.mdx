@@ -1,0 +1,96 @@
+---
+id: ptycho-bg_projections
+sidebar_position: 2
+title: Projection Set Algorithms
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import TwoConvexSetsComponent from '@site/src/components/TwoConvexSetsComponent.js';
+import TwoNonconvexSetsComponent from '@site/src/components/TwoNonconvexSetsComponent.js';
+import FlowerSetsComponent from '@site/src/components/FlowerSetsComponent.js';
+
+import SudokuImage01 from '@site/static/img/sudoku-frame-purple-01.png';
+import SudokuImage02 from '@site/static/img/sudoku-frame-purple-02.png';
+import SudokuImage03 from '@site/static/img/sudoku-frame-purple-03.png';
+import SudokuImage04 from '@site/static/img/sudoku-frame-purple-04.png';
+import SudokuImage05 from '@site/static/img/sudoku-frame-purple-05.png';
+import SudokuImageGIF from '@site/static/img/sudoku-frames-purple-infinite.gif';
+
+## Projection Set Algorithms
+
+- Proximal gradient methods are a powerful technique to solve non-convex inverse problems  
+- Problem: find the intersection of two sets
+  - Catch: only allowed to operate on one set a time
+
+<Tabs Lazy>
+  <TabItem value="two-convex-sets" label="Two Convex Sets" default>
+  <ul>
+    <li> Two convex sets &rarr; "alternating projections" guaranteed to converge </li>
+  </ul>
+    <TwoConvexSetsComponent />
+  </TabItem>
+  <TabItem value="two-nonconvex-sets" label="Two Non-convex Sets">
+  <ul>
+    <li> Two non-convex sets &rarr; "generalized projections" show more robust convergence </li>
+  </ul>
+    <TwoNonconvexSetsComponent />
+  </TabItem>
+  <TabItem value="multiple-sets" label="Multiple Non-convex Sets">
+  <ul>
+    <li> Multiple non-convex sets &rarr; require consistency across parallel projections </li>
+  </ul>
+    <FlowerSetsComponent />
+  </TabItem>
+  <TabItem value="sudoku" label="Sudoku for Dummies">
+  <ul>
+    <li> Sudoku is a constraint satisfaction problem:</li>
+      <ul>
+        <li> Each row contains only one of each of the numbers 1-9 </li>
+        <li> Each column contains only one of each of the numbers 1-9 </li>
+        <li> Each 3x3 block contains only one of each of the numbers 1-9 </li>
+        <li> Solution must be consistent with a (minimum) set of pre-defined clues </li>
+      </ul>
+    <li> Each constraint can be interpreted as a projection to a non-convex set </li>
+    <li> This can now be solved using iterative proximal gradient algorithms </li>
+  </ul>
+
+  <Tabs>
+    <TabItem value="iteration 01" label="iteration 01" default>
+      <figure>
+	<img src={SudokuImage01} alt="Sudoku Solution 01" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="iteration 02" label="iteration 02">
+      <figure>
+	<img src={SudokuImage02} alt="Sudoku Solution 02" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="iteration 03" label="iteration 03">
+      <figure>
+	<img src={SudokuImage03} alt="Sudoku Solution 03" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="iteration 04" label="iteration 04">
+      <figure>
+	<img src={SudokuImage04} alt="Sudoku Solution 04" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="iteration 05" label="iteration 05">
+      <figure>
+	<img src={SudokuImage05} alt="Sudoku Solution 05" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="solution gif" label="animated solution">
+      <figure>
+	<img src={SudokuImageGIF} alt="Sudoku Solution GIF" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+  </Tabs>
+  </TabItem>
+
+</Tabs>
+

@@ -1,0 +1,29 @@
+---
+id: mag-bg_afm
+sidebar_position: 3
+title: Imaging Magnetization
+hide_table_of_contents: true
+hide_title: true
+---
+
+import ElectrostaticVsMagneticImage from '@site/static/img/electrostatic_vs_magnetic_scattering.svg';
+
+
+## Atomic-Scale Imaging of Magnetization
+
+- Accelerated electron beams interacting with a thin sample acquire phase shifts:  
+  - Electrostatic scattering contribution is often orders of magnitude larger than magnetic contribution
+
+$$
+\begin{aligned}
+
+\phi\left(\boldsymbol{r}_{\perp}\right) &= \phi_e\left(\boldsymbol{r}_{\perp}\right) + \phi_m \left(\boldsymbol{r}_{\perp}\right) \\
+&= \frac{e}{\hbar v} \int_L V(\boldsymbol{r}_{\perp},z) dz - \frac{e}{\hbar} \int_L \boldsymbol{A}(\boldsymbol{r}_{\perp},z) \cdot d \boldsymbol{r}
+\end{aligned}
+$$
+
+<details>
+  <summary> Electrostatic vs Magnetic Scattering Contributions Comparison </summary>
+    <ElectrostaticVsMagneticImage width="100%" height="auto"/>
+</details>
+
